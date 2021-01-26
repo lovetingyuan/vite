@@ -125,6 +125,7 @@ export function indexHtmlMiddleware(
             url,
             filename,
             [...preHooks, devHtmlHook, ...postHooks],
+            req.url,
             server
           )
           return send(req, res, html, 'html')
